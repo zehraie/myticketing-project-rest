@@ -57,8 +57,8 @@ public class ProjectController {
 
     }
 
-
-    @PutMapping("/manager/complete/{projectCode}")
+                                                      // I AM UPDATING THE PROJECT WHICH HAS PROJECT CODE
+    @PutMapping("/manager/complete/{projectCode}")  // KIND OF UPDATING; MANAGER GOES TO PROJEXT AND CLICK THE COMPLETE IT, WE ARE UPDATING ONE EXISTING PROJECT
     public ResponseEntity<ResponseWrapper> managerCompleteProject(@PathVariable("projectCode") String code){
         projectService.complete(code);
         return ResponseEntity.ok(new ResponseWrapper("Project is successfully completed",HttpStatus.OK));
